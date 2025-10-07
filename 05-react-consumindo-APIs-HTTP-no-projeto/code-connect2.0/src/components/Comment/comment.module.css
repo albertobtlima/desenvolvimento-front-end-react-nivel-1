@@ -8,3 +8,6 @@
 .comment p {
     margin: 0;
 }
+.divider {
+    flex-grow: 1;
+}
