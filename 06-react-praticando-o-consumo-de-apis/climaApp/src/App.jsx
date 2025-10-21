@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 function App() {
-  const [wether, setWeather] = useState(null);
+  const [weather, setWeather] = useState(null);
 
   useEffect(() => {
     async function fetchWeather() {
@@ -26,13 +26,14 @@ function App() {
 
     fetchWeather();
   }, []);
+
   return (
     <div className="app-container">
       <SearchBar />
-      {wether && (
+      {weather && (
         <>
-          <h1>{wether.city}</h1>
-          <WeatherCard weather={wether} />
+          <h1>{weather.city}</h1>
+          <WeatherCard weather={weather} />
         </>
       )}
     </div>
